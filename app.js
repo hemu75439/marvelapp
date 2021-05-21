@@ -2,13 +2,16 @@ import {ts_apikey_hash} from './cred.js'
 
 const main = document.querySelector('main')
 var offset = 0
-
+const loading = document.querySelector('.loading')
 const getMoreBtn = document.querySelector('.get-more button')
 getMoreBtn.addEventListener('click', getMore)
 
 
 function getMore(e) {
     e.preventDefault()
+
+    loading.style.display = ""
+    getMoreBtn.style.display = "none"
 
     offset += 100
     getItems()
@@ -45,6 +48,9 @@ function updateUI(data) {
         a.appendChild(div)
         main.appendChild(a)
     });
+
+    loading.style.display = "none"
+    getMoreBtn.style.display = ""
 }
 
 function setfooter(footer) {
@@ -52,5 +58,5 @@ function setfooter(footer) {
 }
 
 
-
+getMoreBtn.style.display = "none"
 getItems()
