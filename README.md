@@ -4,6 +4,8 @@
 
 <p>I made this just for fun....</p>
 
+<p><img src="./sample.png" alt="App Sample Image"></p>
+
 <h2>Specifications: </h2>
 
 <p>I have used Marvel's api to build this website.</p>
